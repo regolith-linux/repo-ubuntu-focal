@@ -1,8 +1,6 @@
-# Substitue NAMEHERE with an appropriate name
 name: builder
 
 on:
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
