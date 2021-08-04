@@ -22,6 +22,8 @@ jobs:
           cat model.json | ./lib/creche/build-manifest.sh ./manifest-raw.txt /tmp/manifest
           sort ./manifest-raw.txt > ./manifest.txt
           rm ./manifest-raw.txt
+          echo "Generated manifest:"
+          cat ./manifest.txt
       
       - name: Check if there are changes
         id: changes
