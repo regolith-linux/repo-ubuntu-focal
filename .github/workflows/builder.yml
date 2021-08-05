@@ -10,8 +10,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: 'true'
+      - name: Checkout dependencies
+        run: |
+          git clone -b release https://github.com/regolith-linux/regolith-creche.git lib/creche/
       - name: Generate Model
         run: |
           jq -s '.[0] * .[1]' ./lib/creche/regolith-2.0.pkgmodel.json focal-model.json > model.json
