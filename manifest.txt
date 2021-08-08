@@ -1,9 +1,10 @@
 ayu-theme master ac812de
 fonts-jetbrains-mono master 6fe0e76
 fonts-materialdesignicons-webfont master 72e4dfc
-i3-gaps-wm ubuntu/focal dada4b8
+i3-gaps-wm ubuntu/focal-next 87099ed0
 i3-next-workspace main cb469ba
 i3-snapshot master 5135c86
+i3-wm next 73c35c87
 i3xrocks master 0c39c51
 python3-i3ipc master 4d16601
 regolith-compositor-compton-glx master eebe813
