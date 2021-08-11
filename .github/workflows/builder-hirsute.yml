@@ -19,12 +19,12 @@ jobs:
           
       - name: Generate Manifest
         run: |
-          [ -e ./manifest.txt ] && rm ./manifest.txt
+          [ -e ./hirsute-manifest.txt ] && rm ./hirsute-manifest.txt
           cat model.json | ./lib/creche/build-manifest.sh ./manifest-raw.txt /tmp/manifest
-          sort ./manifest-raw.txt > ./manifest.txt
+          sort ./manifest-raw.txt > ./hirsute-manifest.txt
           rm ./manifest-raw.txt
           echo "Generated manifest:"
-          cat ./manifest.txt
+          cat ./hirsute-manifest.txt
       
       - name: Check if there are changes
         id: changes
@@ -61,7 +61,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add ./docs/*
-          git add ./manifest.txt
+          git add ./hirsute-manifest.txt
           git commit -am "Automated repo update"
           
       - name: Push Changes
